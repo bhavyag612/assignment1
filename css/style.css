@@ -1,16 +1,27 @@
+html{
+    height:100%;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     color: #2D7490;
     background-color: #F2E9DD;
+    min-height: 100%;
+    margin: 0;
 }
 
 aside{
     background-color: #FAF4ED;
 }
 
+main{
+    margin:1%;
+}
+
 textarea{
     background-color: #FAF4ED;
+    width: 100%;
 }
+
 
 button{
     color:#FFFFFF;
@@ -56,4 +67,29 @@ aside ul{
     list-style-type: square;
     list-style-position: inside;
     text-align: center;
+}
+
+.mainTopBtn{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3%;
+}
+
+.mainEndBtn{
+    display: flex;
+    justify-content: end;
+    padding-top: 3%;
+}
+
+.mainEndBtn button{
+    margin: 0 1%;
+}
+
+footer{
+    text-align: center;
+}
+
+footer img{
+    height: 7%;
+    width: 7%;
 }
