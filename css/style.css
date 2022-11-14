@@ -3,27 +3,47 @@ body{
     color: #2D7490;
     background-color: #F2E9DD;
 }
+
 aside{
     background-color: #FAF4ED;
 }
+
 textarea{
     background-color: #FAF4ED;
 }
+
 button{
     color:#FFFFFF;
     border:0;
     padding: 1.5% 2%;
     border-radius: 1em;
 }
+
 #newNoteBtn{
     background-color: #5394A0;
 }
+
 #darkThmBtn{
     background-color: #6E6987;
 }
+
 #saveBtn{
     background-color: #5394A0;
 }
+
 #cancelBtn{
     background-color: #D9827C;
+}
+header h1{
+    text-align: center;
+}
+
+.headerList{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.headerList li{
+    padding: 0 1%;
 }
