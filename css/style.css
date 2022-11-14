@@ -20,6 +20,7 @@ main{
 textarea{
     background-color: #FAF4ED;
     width: 100%;
+    border: #77A7EB solid;
 }
 
 
@@ -89,7 +90,7 @@ footer{
     text-align: center;
 }
 
-footer img{
+a>img{
     height: 7%;
     width: 7%;
     min-width: 30px;
