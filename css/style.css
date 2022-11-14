@@ -12,6 +12,7 @@ body{
 aside{
     background-color: #FAF4ED;
     flex: 1 1 20%;
+    text-align: center;
 }
 
 main{
@@ -113,5 +114,8 @@ a>img{
     }
     header ul{
         justify-content: flex-end;
+    }
+    aside ul{
+        text-align: left;
     }
 }
