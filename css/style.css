@@ -9,3 +9,21 @@ aside{
 textarea{
     background-color: #FAF4ED;
 }
+button{
+    color:#FFFFFF;
+    border:0;
+    padding: 1.5% 2%;
+    border-radius: 1em;
+}
+#newNoteBtn{
+    background-color: #5394A0;
+}
+#darkThmBtn{
+    background-color: #6E6987;
+}
+#saveBtn{
+    background-color: #5394A0;
+}
+#cancelBtn{
+    background-color: #D9827C;
+}
