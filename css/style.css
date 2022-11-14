@@ -92,4 +92,6 @@ footer{
 footer img{
     height: 7%;
     width: 7%;
+    min-width: 30px;
+    min-height: 30px;
 }
