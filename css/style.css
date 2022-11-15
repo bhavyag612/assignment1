@@ -1,9 +1,10 @@
 html{
     height:100%;
 }
+
 body{
     font-family: 'Montserrat', sans-serif;
-    color: #2D7490;
+    color: #205265;
     background-color: #F2E9DD;
     min-height: 100%;
     margin: 0;
@@ -11,7 +12,6 @@ body{
 
 aside{
     background-color: #FAF4ED;
-    flex: 1 1 20%;
     text-align: center;
 }
 
@@ -21,9 +21,9 @@ main{
 
 textarea{
     background-color: #FAF4ED;
-    width: 100%;
+    width: 99%;
     border: #77A7EB solid;
-    resize: none;;
+    resize: none;
 }
 
 
@@ -35,19 +35,19 @@ button{
 }
 
 #newNoteBtn{
-    background-color: #5394A0;
+    background-color: #205265;
 }
 
 #darkThmBtn{
-    background-color: #6E6987;
+    background-color: #4C495F;
 }
 
 #saveBtn{
-    background-color: #5394A0;
+    background-color: #205265;
 }
 
 #cancelBtn{
-    background-color: #D9827C;
+    background-color: #862D27;
 }
 header h1{
     text-align: center;
@@ -93,6 +93,10 @@ footer{
     text-align: center;
 }
 
+footer > a{
+    display: inline-block;
+}
+
 a>img{
     height: 7%;
     width: 7%;
@@ -105,7 +109,7 @@ a>img{
 @media all and (min-width:600px){
     body{
         display:grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr 3fr 1fr;
     }
     aside{
