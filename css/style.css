@@ -10,22 +10,7 @@ body {
     margin: 0;
 }
 
-aside {
-    background-color: #FAF4ED;
-    text-align: center;
-}
-
-main {
-    margin: 3%;
-}
-
-textarea {
-    background-color: #FAF4ED;
-    width: 100%;
-    border: #77A7EB solid;
-    resize: none;
-}
-
+/**** Buttons****/
 
 button {
     color: #FFFFFF;
@@ -38,7 +23,7 @@ button {
     background-color: #205265;
 }
 
-#newNoteBtn:hover{
+#newNoteBtn:hover {
     background-color: #5394A0;
 }
 
@@ -46,7 +31,7 @@ button {
     background-color: #4C495F;
 }
 
-#darkThmBtn:hover{
+#darkThmBtn:hover {
     background-color: #6E6987;
 }
 
@@ -62,9 +47,11 @@ button {
     background-color: #862D27;
 }
 
-#cancelBtn:hover{
+#cancelBtn:hover {
     background-color: #D9827C;
 }
+
+/****Header****/
 
 header h1 {
     text-align: center;
@@ -81,9 +68,16 @@ header ul li {
     padding: 0 1%;
 }
 
-header ul li a{
+header ul li a {
     text-decoration: none;
     color: #205265;
+}
+
+/****My notes****/
+
+aside {
+    background-color: #FAF4ED;
+    text-align: center;
 }
 
 aside h2 {
@@ -97,10 +91,23 @@ aside ul {
     padding: 0 3%;
 }
 
+/****Main****/
+
+main {
+    margin: 3%;
+}
+
 .mainTopBtn {
     display: flex;
     justify-content: space-between;
     padding-bottom: 3%;
+}
+
+textarea {
+    background-color: #FAF4ED;
+    width: 100%;
+    border: #77A7EB solid;
+    resize: none;
 }
 
 .mainEndBtn {
@@ -112,6 +119,8 @@ aside ul {
 .mainEndBtn button {
     margin: 0 1%;
 }
+
+/****Footer****/
 
 footer {
     text-align: center;
@@ -125,6 +134,8 @@ a>img {
     max-width: 35px;
     max-height: 35px;
 }
+
+/****Desktop layout****/
 
 @media all and (min-width:600px) {
     body {
