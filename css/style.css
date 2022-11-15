@@ -16,12 +16,12 @@ aside {
 }
 
 main {
-    margin: 1%;
+    margin: 3%;
 }
 
 textarea {
     background-color: #FAF4ED;
-    width: 99%;
+    width: 100%;
     border: #77A7EB solid;
     resize: none;
 }
