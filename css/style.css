@@ -49,8 +49,10 @@ button{
 #cancelBtn{
     background-color: #862D27;
 }
+
 header h1{
     text-align: center;
+    padding: 0 10%;
 }
 
 header ul{
@@ -59,7 +61,7 @@ header ul{
     justify-content: center;
 }
 
-.headerList li{
+header ul li{
     padding: 0 1%;
 }
 
@@ -71,6 +73,7 @@ aside ul{
     list-style-type: square;
     list-style-position: inside;
     text-align: center;
+    padding: 0 3%;
 }
 
 .mainTopBtn{
@@ -97,13 +100,9 @@ footer > a{
     display: inline-block;
 }
 
-a>img{
-    height: 7%;
-    width: 7%;
-    min-width: 30px;
-    min-height: 30px;
-    max-width: 50px;
-    max-height: 50px;
+a > img{
+    max-width: 30px;
+    max-height: 30px;
 }
 
 @media all and (min-width:600px){
@@ -121,5 +120,9 @@ a>img{
     }
     aside ul{
         text-align: left;
+    }
+    a>img{
+        max-width: 50px;
+        max-height: 50px;
     }
 }
