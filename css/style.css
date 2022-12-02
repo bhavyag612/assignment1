@@ -19,35 +19,27 @@ button {
     border-radius: 1em;
 }
 
-#newNoteBtn {
+.newNoteBtn {
     background-color: #205265;
 }
 
-#newNoteBtn:hover {
+.newNoteBtn:hover {
     background-color: #5394A0;
 }
 
-#darkThmBtn {
-    background-color: #4C495F;
-}
-
-#darkThmBtn:hover {
-    background-color: #6E6987;
-}
-
-#saveBtn {
+.saveBtn {
     background-color: #205265;
 }
 
-#saveBtn:hover {
+.saveBtn:hover {
     background-color: #5394A0;
 }
 
-#cancelBtn {
+.cancelBtn {
     background-color: #862D27;
 }
 
-#cancelBtn:hover {
+.cancelBtn:hover {
     background-color: #D9827C;
 }
 
