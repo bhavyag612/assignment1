@@ -39,3 +39,46 @@ function cancelNote(){
 }
 cancelBtn.addEventListener("click",cancelNote);
 
+let clickCounter= 1;
+function newNote(){ 
+    if (clickCounter===1){
+        saveBtn.style.display='inline-block';
+        cancelBtn.style.display='inline-block';
+        textArea.style.display='inline-block';
+        clickCounter=clickCounter-1;
+    }
+    else if (clickCounter===0){
+        textArea.value='';
+        clickCounter=1;
+    }
+}
+newNoteBtn.addEventListener("click", newNote);
+
+function addNoteToArray(newNote){
+    let noteIndex=-1;
+    for(let note of notesArray){
+        if (note.title===newNote.title){
+            noteIndex=notesArray.indexOf(note);
+            console.log(noteIndex);
+            break;
+        }  
+    }
+    if (noteIndex!=-1){
+        alert("Previous Note Updated!");
+        notesArray[noteIndex].body=newNote.body;
+    }
+    else{
+        alert("New note added");
+        notesArray.push(newNote);
+        // addNoteToList(newNote);
+    }
+    console.log(notesArray);
+}
+function saveNote(){
+    title=prompt("Enter the name of your note: ");
+    body=textArea.value;
+    newNote={title,body};
+    addNoteToArray(newNote);
+    textArea.value='';
+}
+saveBtn.addEventListener("click",saveNote);
