@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #205265;
+    color: #5394A0;
     background-color: #F2E9DD;
     min-height: 100%;
     margin: 0;
@@ -20,27 +20,35 @@ button {
 }
 
 .newNoteBtn {
-    background-color: #205265;
+    background-color: #5394A0;
 }
 
 .newNoteBtn:hover {
-    background-color: #5394A0;
-}
-
-.saveBtn {
     background-color: #205265;
 }
 
-.saveBtn:hover {
+.darkThmBtn {
+    background-color: #6E6987;
+}
+
+.darkThmBtn:hover {
+    background-color: #4C495F;
+}
+
+.saveBtn {
     background-color: #5394A0;
 }
 
+.saveBtn:hover {
+    background-color: #205265;
+}
+
 .cancelBtn {
-    background-color: #862D27;
+    background-color: #D9827C;
 }
 
 .cancelBtn:hover {
-    background-color: #D9827C;
+    background-color: #862D27;
 }
 
 /****Header****/
@@ -153,4 +161,29 @@ a>img {
         max-width: 50px;
         max-height: 50px;
     }
+}
+
+
+/*****Dark Theme****/
+.asideDarkThm{
+    background-color: #354553;
+}
+.textAreaDarkThm{
+    background-color: #354553;
+    color: white;
+}
+.bodyDarkThm{
+    background-color: #293743;
+}
+.saveBtnDark{
+    background-color: #205265;
+}
+.newNoteBtnDark{
+    background-color: #205265;
+}
+.cancelBtnDark{
+    background-color: #862D27;
+}
+.darkThmBtnDark{
+    background-color: #4C495F;
 }
