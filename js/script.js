@@ -4,6 +4,7 @@ let cancelBtn=document.querySelector('.cancelBtn');
 let saveBtn=document.querySelector('.saveBtn');
 let newNoteBtn=document.querySelector('.newNoteBtn');
 let textArea= document.querySelector('textarea');
+let noteList= document.querySelector('aside ul');
 
 let notesArray= [
     {
@@ -39,27 +40,18 @@ function cancelNote(){
 }
 cancelBtn.addEventListener("click",cancelNote);
 
-let clickCounter= 1;
-function newNote(){ 
-    if (clickCounter===1){
-        saveBtn.style.display='inline-block';
-        cancelBtn.style.display='inline-block';
-        textArea.style.display='inline-block';
-        clickCounter=clickCounter-1;
-    }
-    else if (clickCounter===0){
-        textArea.value='';
-        clickCounter=1;
-    }
+
+function addNoteToList(newNote){
+    let newNoteItem=document.createElement('li');
+    noteList.appendChild(newNoteItem);
+    newNoteItem.textContent=newNote.title;
 }
-newNoteBtn.addEventListener("click", newNote);
 
 function addNoteToArray(newNote){
     let noteIndex=-1;
     for(let note of notesArray){
         if (note.title===newNote.title){
             noteIndex=notesArray.indexOf(note);
-            console.log(noteIndex);
             break;
         }  
     }
@@ -70,9 +62,8 @@ function addNoteToArray(newNote){
     else{
         alert("New note added");
         notesArray.push(newNote);
-        // addNoteToList(newNote);
+        addNoteToList(newNote);
     }
-    console.log(notesArray);
 }
 function saveNote(){
     title=prompt("Enter the name of your note: ");
