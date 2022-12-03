@@ -1,3 +1,4 @@
+/*Creating variables for each element */
 let darkThmBtn=document.querySelector(".darkThmBtn");
 let myNotesSidebar=document.querySelector('aside');
 let cancelBtn=document.querySelector('.cancelBtn');
@@ -5,7 +6,10 @@ let saveBtn=document.querySelector('.saveBtn');
 let newNoteBtn=document.querySelector('.newNoteBtn');
 let textArea= document.querySelector('textarea');
 let noteList= document.querySelector('aside ul');
-let cancelClickflag=false;
+
+let cancelClickflag=false; //variable to check if cancel button is clicked
+
+/*Creating notesArray */
 let notesArray= [
     {
         title:"note one",
@@ -17,6 +21,7 @@ let notesArray= [
     }
 ]
 
+/*Event handling for dark theme button */
 function darkTheme(){
     myNotesSidebar.classList.toggle("asideDarkThm");
     document.body.classList.toggle("bodyDarkThm");
@@ -34,36 +39,38 @@ function darkTheme(){
 }
 darkThmBtn.addEventListener("click", darkTheme);
 
+/*Event handling for cancel button */
 function cancelNote(){
     saveBtn.style.display='none';
     cancelBtn.style.display='none';
     textArea.style.display='none';
-    cancelClickflag=true;
+    cancelClickflag=true; //cancel button clicked
 }
 cancelBtn.addEventListener("click",cancelNote);
 
-
+/*Event handilng for New Note button */
 function newNote(){ 
-    if (cancelClickflag===true){
+    if (cancelClickflag===true){            //Displays the buttons and textarea 
         saveBtn.style.display='inline-block';
         cancelBtn.style.display='inline-block';
         textArea.style.display='inline-block';
         cancelClickflag=false;
     }
-    else {
+    else {                      //Removes content from text area
         textArea.value='';
     }
 }
 newNoteBtn.addEventListener("click", newNote);
 
+/*Event handling for Save Button */
 
-function addNoteToList(newNote){
+function addNoteToList(newNote){            //Adds new note to sidebar
     let newNoteItem=document.createElement('li');
     noteList.appendChild(newNoteItem);
     newNoteItem.textContent=newNote.title;
 }
 
-function addNoteToArray(newNote){
+function addNoteToArray(newNote){          //Adds note object to array
     let noteIndex=-1;
     for(let note of notesArray){
         if (note.title===newNote.title){
@@ -78,25 +85,27 @@ function addNoteToArray(newNote){
     else{
         alert("New note added");
         notesArray.push(newNote);
-        addNoteToList(newNote);
+        addNoteToList(newNote);   
     }
 }
 
-function saveNote(){
+function saveNote(){    //Prompts the user to enter the title
     title=prompt("Enter the name of your note: ");
     body=textArea.value;
     newNote={title,body};
     addNoteToArray(newNote);
     textArea.value='';
 }
+
 saveBtn.addEventListener("click",saveNote);
 
 
-function sideBarEventHandler(e){
+/*Event handling for side bar (display notes) */
+function displayNote(e){
     for(let note of notesArray){
         if (note.title===e.target.textContent){
             textArea.value=note.body;
         }  
     }
 }
-myNotesSidebar.addEventListener("click",sideBarEventHandler);
+myNotesSidebar.addEventListener("click",displayNote);

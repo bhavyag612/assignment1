@@ -182,12 +182,12 @@ a>img {
 .saveBtnDark{
     background-color: #205265;
 }
-.newNoteBtnDark{
-    background-color: #205265;
-}
 .cancelBtnDark{
     background-color: #862D27;
 }
 .darkThmBtnDark{
     background-color: #4C495F;
+}
+.newNoteBtnDark{
+    background-color: #205265;
 }
