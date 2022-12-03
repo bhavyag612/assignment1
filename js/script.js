@@ -24,6 +24,7 @@ function darkTheme(){
     cancelBtn.classList.toggle("cancelBtnDark");
     saveBtn.classList.toggle("saveBtnDark");
     newNoteBtn.classList.toggle("newNoteBtnDark");
+    darkThmBtn.classList.toggle("darkThmBtnDark");
     if (darkThmBtn.textContent==="Dark Theme"){
         darkThmBtn.textContent="Light Theme";
     }

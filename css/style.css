@@ -17,6 +17,7 @@ button {
     border: 0;
     padding: 1em;
     border-radius: 1em;
+    cursor: pointer;
 }
 
 .newNoteBtn {
@@ -89,6 +90,9 @@ aside ul {
     list-style-position: inside;
     text-align: center;
     padding: 0 3%;
+}
+aside li{
+    cursor: pointer;
 }
 
 /****Main****/
