@@ -31,3 +31,11 @@ function darkTheme(){
     }
 }
 darkThmBtn.addEventListener("click", darkTheme);
+
+function cancelNote(){
+    saveBtn.style.display='none';
+    cancelBtn.style.display='none';
+    textArea.style.display='none';
+}
+cancelBtn.addEventListener("click",cancelNote);
+
