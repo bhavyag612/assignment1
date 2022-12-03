@@ -5,7 +5,7 @@ let saveBtn=document.querySelector('.saveBtn');
 let newNoteBtn=document.querySelector('.newNoteBtn');
 let textArea= document.querySelector('textarea');
 let noteList= document.querySelector('aside ul');
-
+let cancelClickflag=false;
 let notesArray= [
     {
         title:"note one",
@@ -37,8 +37,24 @@ function cancelNote(){
     saveBtn.style.display='none';
     cancelBtn.style.display='none';
     textArea.style.display='none';
+    cancelClickflag=true;
 }
 cancelBtn.addEventListener("click",cancelNote);
+
+
+function newNote(){ 
+    if (cancelClickflag===true){
+        saveBtn.style.display='inline-block';
+        cancelBtn.style.display='inline-block';
+        textArea.style.display='inline-block';
+        cancelClickflag=false;
+    }
+    else {
+        textArea.value='';
+    }
+}
+newNoteBtn.addEventListener("click", newNote);
+
 
 function addNoteToList(newNote){
     let newNoteItem=document.createElement('li');
@@ -64,6 +80,7 @@ function addNoteToArray(newNote){
         addNoteToList(newNote);
     }
 }
+
 function saveNote(){
     title=prompt("Enter the name of your note: ");
     body=textArea.value;
