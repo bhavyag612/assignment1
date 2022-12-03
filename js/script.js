@@ -1,5 +1,5 @@
 let darkThmBtn=document.querySelector(".darkThmBtn");
-let myNotes=document.querySelector('aside');
+let myNotesSidebar=document.querySelector('aside');
 let cancelBtn=document.querySelector('.cancelBtn');
 let saveBtn=document.querySelector('.saveBtn');
 let newNoteBtn=document.querySelector('.newNoteBtn');
@@ -18,7 +18,7 @@ let notesArray= [
 ]
 
 function darkTheme(){
-    myNotes.classList.toggle("asideDarkThm");
+    myNotesSidebar.classList.toggle("asideDarkThm");
     document.body.classList.toggle("bodyDarkThm");
     textArea.classList.toggle("textAreaDarkThm")
     cancelBtn.classList.toggle("cancelBtnDark");
@@ -39,7 +39,6 @@ function cancelNote(){
     textArea.style.display='none';
 }
 cancelBtn.addEventListener("click",cancelNote);
-
 
 function addNoteToList(newNote){
     let newNoteItem=document.createElement('li');
@@ -73,3 +72,13 @@ function saveNote(){
     textArea.value='';
 }
 saveBtn.addEventListener("click",saveNote);
+
+
+function sideBarEventHandler(e){
+    for(let note of notesArray){
+        if (note.title===e.target.textContent){
+            textArea.value=note.body;
+        }  
+    }
+}
+myNotesSidebar.addEventListener("click",sideBarEventHandler);
